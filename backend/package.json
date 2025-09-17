@@ -1,0 +1,20 @@
+{
+  "name": "sca_hackathon_backend",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Caritajoe18/SCA-Microsoft_hackathon#readme",
+  "bugs": {
+    "url": "https://github.com/Caritajoe18/SCA-Microsoft_hackathon/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Caritajoe18/SCA-Microsoft_hackathon.git"
+  },
+  "license": "ISC",
+  "author": "Carita",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

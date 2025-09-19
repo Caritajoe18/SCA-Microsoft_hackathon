@@ -1,8 +1,40 @@
-body { font-family: Arial, sans-serif; 
+*{
+    box-sizing: border-box;
+}
+body {
     text-align: center; 
     padding: 30px; 
+    font: 'Inter';
 }
-    
+
+#welcome h1{
+    color: #2E7D32;
+    font-weight: 700;
+    font-size: 96px;
+    margin-bottom: 0px ;
+
+}
+#welcome p{
+    margin-top: 0;
+}
+
+.btn{
+    width:200px;
+    border: none;
+    padding: 15px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.get{
+    background-color:#2E7D32 ;
+    color: #ffffff;
+}
+.next{
+    background-color: #F57C00;
+    color: #ffffff;
+}
 .step {
      display: none; 
 }
@@ -10,7 +42,7 @@ body { font-family: Arial, sans-serif;
 .step.active { 
     display: block; 
 }
-
+/*
 button { 
     padding: 10px 15px;
     margin-top: 20px; 
@@ -26,4 +58,4 @@ button {
 .btn-prev { 
     background: gray; 
     color: #fff; 
-}
+}*/

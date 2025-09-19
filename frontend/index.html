@@ -16,7 +16,7 @@
     <button class="btn-next" onclick="goTo('#register')">Get Started</button>
     <button class="btn-next" onclick="goTo('#login')">Login</button>
 
-    
+
   </div>
 
   <!-- Step 2: Register -->
@@ -55,23 +55,6 @@
     <button onclick="goTo('#welcome')">Logout</button>
   </div>
 
-  <script>
-    function goTo(hash) {
-      window.location.hash = hash; // changes URL
-      showStep();
-    }
-
-    function showStep() {
-      const hash = window.location.hash || "#welcome"; // default
-      document.querySelectorAll(".step").forEach(step => {
-        step.classList.remove("active");
-      });
-      const active = document.querySelector(hash);
-      if (active) active.classList.add("active");
-    }
-
-    window.addEventListener("hashchange", showStep);
-    window.addEventListener("load", showStep);
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

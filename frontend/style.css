@@ -1,3 +1,29 @@
-body{
-    background-color: aliceblue;
+body { font-family: Arial, sans-serif; 
+    text-align: center; 
+    padding: 30px; 
+}
+    
+.step {
+     display: none; 
+}
+    
+.step.active { 
+    display: block; 
+}
+
+button { 
+    padding: 10px 15px;
+    margin-top: 20px; 
+    border: none; 
+    border-radius: 6px; 
+    cursor: pointer; 
+}
+.btn-next { 
+    background: green; 
+    color: #fff; 
+}
+
+.btn-prev { 
+    background: gray; 
+    color: #fff; 
 }

@@ -1,12 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SCA Hackathon</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-Step Onboarding</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .onboarding-container {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 400px;
+      padding: 20px;
+    }
+
+    .step {
+      display: none;
+    }
+
+    .step.active {
+      display: block;
+      animation: fadeIn 0.4s;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .btn-prev { background: #ccc; }
+    .btn-next { background: #4CAF50; color: #fff; }
+    .btn-finish { background: orange; color: #fff; width: 100%; }
+  </style>
 </head>
 <body>
-    
+
+  <div class="onboarding-container">
+    <!-- Step 1: Login/Register -->
+    <div class="step active" id="step-1">
+      <h2>Welcome 🎉</h2>
+      <p>Please choose an option:</p>
+      <button class="btn-next" onclick="nextStep()">Register</button>
+      <button class="btn-next" onclick="nextStep()">Login</button>
+    </div>
+
+    <!-- Step 2: Basic Info -->
+    <div class="step" id="step-2">
+      <h2>Basic Information</h2>
+      <input type="text" placeholder="Full Name" required><br><br>
+      <input type="email" placeholder="Email" required><br><br>
+      <input type="password" placeholder="Password" required>
+      <div class="buttons">
+        <button class="btn-prev" onclick="prevStep()">Back</button>
+        <button class="btn-next" onclick="nextStep()">Next</button>
+      </div>
+    </div>
+
+    <!-- Step 3: Interests -->
+    <div class="step" id="step-3">
+      <h2>Select Your Interest</h2>
+      <label><input type="checkbox"> Frontend Development</label><br>
+      <label><input type="checkbox"> UI/UX Design</label><br>
+      <label><input type="checkbox"> Video Editing</label><br>
+      <div class="buttons">
+        <button class="btn-prev" onclick="prevStep()">Back</button>
+        <button class="btn-next" onclick="nextStep()">Next</button>
+      </div>
+    </div>
+
+    <!-- Step 4: Confirmation -->
+    <div class="step" id="step-4">
+      <h2>All Set 🎊</h2>
+      <p>Click finish to complete your onboarding.</p>
+      <button class="btn-finish" onclick="finishOnboarding()">Finish</button>
+    </div>
+  </div>
+
+  <script>
+    let currentStep = 1;
+    const steps = document.querySelectorAll(".step");
+
+    function showStep(step) {
+      steps.forEach((s, i) => {
+        s.classList.remove("active");
+        if (i === step - 1) {
+          s.classList.add("active");
+        }
+      });
+    }
+
+    function nextStep() {
+      if (currentStep < steps.length) {
+        currentStep++;
+        showStep(currentStep);
+      }
+    }
+
+    function prevStep() {
+      if (currentStep > 1) {
+        currentStep--;
+        showStep(currentStep);
+      }
+    }
+
+    function finishOnboarding() {
+      alert("Onboarding Complete! 🎉 Redirecting to dashboard...");
+      window.location.href = "dashboard.html"; // change to your dashboard page
+    }
+  </script>
 </body>
 </html>

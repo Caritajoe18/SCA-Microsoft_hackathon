@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="Image/lenoff-logo.png">
     <title>Lenoff | Offline learning, Online Growth.</title>
     <link rel="stylesheet" href="style.css">
     
@@ -11,6 +12,7 @@
 
   <!-- Step 1 -->
   <div class="step" id="welcome">
+    <img src="Image/lenoff-logo.png" class="logo">
     <h1>Lenoff</h1>
     <p>Offline learning, Online Growth.</p>
 
@@ -22,24 +24,52 @@
 
   <!-- Step 2: Register -->
   <div class="step" id="register">
-    <h2>Register</h2>
-    <input type="text" placeholder="Full Name"><br><br>
-    <input type="email" placeholder="Email"><br><br>
-    <input type="password" placeholder="Password"><br><br>
-    <button class="btn-prev" onclick="goTo('#welcome')">Back</button>
-    <button class="btn-next" onclick="goTo('#interests')">Next</button>
+    <img src="Image/lenoff-logo.png" class="logo">
+    <h2>Registeration</h2>
+    <form action="" id="fregister"> 
+    <label>Name</label><br>
+    <input type="text"><br>
+
+    <label>Username</label><br>
+    <input type="text"><br>
+
+    <label>Email</label><br>
+    <input type="email"><br>
+
+    <label>Phone number</label><br>
+    <input type="number"><br>
+
+    <label for="password">Password</label><br>
+    <input type="password"><br>
+    
+    <label for="C-password">Confirm Password</label><br>
+    <input type="password">
+ 
+    <button class="btn next" onclick="goTo('#login')">Register</button>
+    <p>Already have an account? <a href="#login"  onclick="goTo('#login')">Login</a></p>
+    <!--<button class="btn-prev" onclick="goTo('#welcome')">Back</button>
+    <button class="btn-next" onclick="goTo('#interests')">Next</button>-->
+  </form>  
   </div>
 
   <!-- Step 3: Login -->
   <div class="step" id="login">
-    <h2>Login</h2>
-    <input type="email" placeholder="Email"><br><br>
-    <input type="password" placeholder="Password"><br><br>
-    <button class="btn-prev" onclick="goTo('#welcome')">Back</button>
-    <button class="btn-next" onclick="goTo('#dashboard')">Login</button>
+    <img src="Image/lenoff-logo.png" class="logo">
+    <h2>Welcome back, you've been greatly missed!</h2>
+    <p>Sign in to access your account</p>
+    <form action="" id="login">
+      <label>Username</label><br>
+      <input type="text"><br>
+
+      <label for="password">Password</label>
+      <input type="password"><br>
+
+      <button class="btn-next" onclick="goTo('#dashboard')">Login</button>
+   <!-- <button class="btn-prev" onclick="goTo('#welcome')">Back</button>-->
+   </form>
   </div>
 
-  <!-- Step 4: Interests -->
+  <!-- Step 4: Interests
   <div class="step" id="interests">
     <h2>Select Interests</h2>
     <label><input type="checkbox"> Web Dev</label><br>
@@ -48,13 +78,68 @@
     <button class="btn-prev" onclick="goTo('#register')">Back</button>
     <button class="btn-next" onclick="goTo('#dashboard')">Finish</button>
   </div>
-
-  <!-- Step 5: Dashboard -->
+ -->
+  <!-- Step 4: Dashboard -->
   <div class="step" id="dashboard">
-    <h2>🎊 Welcome to your Dashboard!</h2>
-    <p>You’ve completed onboarding.</p>
-    <button onclick="goTo('#welcome')">Logout</button>
+    <nav>
+      <img src="Image/lenoff-logo.png" class="logo">
+      <h2>Lenoff</h2> 
+      <img src=">">
+      <button onclick="goTo('#welcome')">Logout</button>
+    </nav>
+    <h2>Welcome back, @username</h2>
+    <p>Choose a track to start learning</p>
+    
+    <div class="courses">
+      <div class="course-item">
+        <h3>Web Development</h3>
+        <p>Html, Css, Javascript</p>
+        <button class="s-track">Start Track</button>
+      </div>
+      <div class="course-item">
+        <h3>Data Science & Analytics</h3>
+        <p>Excel, SQL, PowerBi, Python</p>
+        <button class="s-track">Start Track</button>
+      </div>
+      <div class="course-item">
+        <h3>Cyber Security</h3>
+        <p>Network Security, Ethical  Hacking Encryption</p>
+        <button class="s-track">Start Track</button>
+      </div>
+      <div class="course-item">
+        <h3>UI/UX Design</h3>
+        <p>Figma, Wireframing, Prototyping</p>
+        <button class="s-track">Start Track</button>
+      </div>
+      <div class="course-item">
+        <h3>Product Management</h3>
+        <p>Roadmaps, Agile, Jira</p>
+        <button class="s-track">Start Track</button>
+      </div>
+      <div class="course-item">
+        <h3>Digital Marketing</h3>
+        <p>SEO, Google Ads, Social Media Marketing</p>
+        <button class="s-track">Start Track</button>
+      </div>
+      <div class="course-item">
+        <h3>Technical Writing</h3>
+        <p>Documentation, API Guides, User Manuals</p>
+        <button class="s-track">Start Track</button>
+      </div>
+      <div class="course-item">
+        <h3>Graphic Design</h3>
+        <p>Photoshop, Illustrator, Canva</p>
+        <button class="s-track">Start Track</button>
+      </div>
+      <div class="course-item">
+        <h3>Video & Animation</h3>
+        <p>After Effects, Premiere Pro, Blender</p>
+        <button class="s-track">Start Track</button>
+      </div>
+    </div>
   </div>
+
+  <!-- Step 4: Dashboard -->
 
   <script src="script.js"></script>
 </body>

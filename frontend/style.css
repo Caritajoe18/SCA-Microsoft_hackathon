@@ -1,10 +1,15 @@
 *{
     box-sizing: border-box;
 }
-body {
-    padding: 30px; 
-    font: 'Inter';
+@font-face {
+    font-family: 'Inter';
+    src: url(Inter-Regular.ttf);
 }
+body {
+    font-family: 'Inter';
+}
+
+/*Welcome*/
 .logo{
     width: 8em;
     margin-bottom: 0;
@@ -33,7 +38,6 @@ body {
     margin-top: 5px;
     cursor: pointer;
     border-radius: 10px;
-    text-align: center;
 }
 
 .get{
@@ -45,13 +49,15 @@ body {
     color: #ffffff;
 }
 
+/*Register*/
+
 #register {
     width: 310px;
     margin: auto; 
-
+text-align: center;
 }
 #register .logo{
-    text-align: center;
+    
     justify-content: center;
     align-items: center;
 }
@@ -66,13 +72,158 @@ body {
     padding: 7px 0;
     background: #D9D9D9;
     border: none;
+    
 }
 #fregister label{
+
     font-size: 12px;
     font-weight: 700;
+    display: block;
+    text-align: left;
+    width: 300px; /* Match input width */
+    margin: 0 auto; /* Center the label block itself */
+    margin-top: 5px;
+    margin-bottom: -15px;
+
 }
 
+/*Login*/
 
+#login{
+    width: 310px;
+    margin: auto; 
+    text-align: center;
+
+}
+#login form{
+    text-align: left;
+    display: inline-block;
+}
+
+#login-n input{
+    width: 300px;
+    padding: 7px 0;
+    background: #D9D9D9;
+    border: none;
+}
+#login-n label{
+    font-size: 12px;
+    font-weight: 700;
+    text-align: left !important;
+}
+
+/*Dashboard*/
+
+#dashboard nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F4C590;
+    margin: -8px;
+    padding: 10px;
+}
+#dashboard nav .icon{
+    width: 50px;
+}
+.iconside{
+    display: flex;
+    align-items: center;
+}
+#dashboard nav .logo{
+    width: 3em;
+}
+nav button{
+    width:200px;
+    border: none;
+    padding: 15px;
+    margin-top: 5px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color:#2E7D32 ;
+    color: #ffffff;
+}
+
+/*Content*/
+
+.courses{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+@media screen and (max-width:450px) {
+    .courses{
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (min-width:451px) and (max-width:620px){
+    .courses{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.s-track{
+    width:100px;
+    border: none;
+    padding: 15px;
+    margin-top: 5px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color:#F57C00;
+    color: #ffffff;
+}
+
+/*Profile*/
+#profile nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFF7F0;
+    margin: -8px;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+#profile .logo{
+    width: 3em;
+}
+.dash{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.profile-c{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 600px;
+    margin: 0 auto;
+    gap: 10px;
+
+}
+.profile-details .icon{
+    width: 50px;
+}
+.profile-details{
+    background-color: #D9D9D9;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+}
+
+.progress{
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    width: 300px;
+    padding: 20px;
+}
+.progress h3{
+    color: #2E7D32;
+}
+.progress .highlight{
+    color: #2E7D32;
+}
+.progress ul li{
+    list-style-type: none;
+}
 .step {
      display: none; 
 }
@@ -80,20 +231,3 @@ body {
 .step.active { 
     display: block; 
 }
-/*
-button { 
-    padding: 10px 15px;
-    margin-top: 20px; 
-    border: none; 
-    border-radius: 6px; 
-    cursor: pointer; 
-}
-.btn-next { 
-    background: green; 
-    color: #fff; 
-}
-
-.btn-prev { 
-    background: gray; 
-    color: #fff; 
-}*/
